@@ -1,0 +1,271 @@
+<!DOCTYPE html><html lang="th"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects - 128B!t</title><link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet"><style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Orbitron',sans-serif;
+}
+
+body{
+background:#05000a;
+color:#c77dff;
+text-align:center;
+}
+
+/* particles */
+
+#particles-js{
+position:fixed;
+width:100%;
+height:100%;
+z-index:-1;
+}
+
+/* container */
+
+.container{
+padding:40px 20px;
+}
+
+h1{
+margin-bottom:30px;
+}
+
+/* project grid */
+
+.projects{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+max-width:900px;
+margin:auto;
+}
+
+/* card */
+
+.card{
+background:rgba(255,255,255,0.05);
+border-radius:15px;
+padding:20px;
+backdrop-filter:blur(10px);
+box-shadow:0 0 20px rgba(157,78,221,0.5);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-6px);
+box-shadow:0 0 30px #9d4edd;
+}
+
+.card img{
+width:100%;
+border-radius:10px;
+margin-bottom:10px;
+}
+
+/* neon button */
+
+.btn{
+position:relative;
+display:inline-block;
+padding:10px 22px;
+color:white;
+text-decoration:none;
+border-radius:8px;
+overflow:hidden;
+margin-top:10px;
+}
+
+.btn span{
+position:absolute;
+display:block;
+}
+
+.btn span:nth-child(1){
+top:0;
+left:-100%;
+width:100%;
+height:2px;
+background:linear-gradient(90deg,transparent,#c77dff);
+animation:btn1 1.5s linear infinite;
+}
+
+@keyframes btn1{
+0%{left:-100%;}
+100%{left:100%;}
+}
+
+.btn span:nth-child(2){
+top:-100%;
+right:0;
+width:2px;
+height:100%;
+background:linear-gradient(180deg,transparent,#c77dff);
+animation:btn2 1.5s linear infinite;
+animation-delay:.25s;
+}
+
+@keyframes btn2{
+0%{top:-100%;}
+100%{top:100%;}
+}
+
+.btn span:nth-child(3){
+bottom:0;
+right:-100%;
+width:100%;
+height:2px;
+background:linear-gradient(270deg,transparent,#c77dff);
+animation:btn3 1.5s linear infinite;
+animation-delay:.5s;
+}
+
+@keyframes btn3{
+0%{right:-100%;}
+100%{right:100%;}
+}
+
+.btn span:nth-child(4){
+bottom:-100%;
+left:0;
+width:2px;
+height:100%;
+background:linear-gradient(360deg,transparent,#c77dff);
+animation:btn4 1.5s linear infinite;
+animation-delay:.75s;
+}
+
+@keyframes btn4{
+0%{bottom:-100%;}
+100%{bottom:100%;}
+}
+
+/* popup image */
+
+#popup{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.85);
+display:none;
+justify-content:center;
+align-items:center;
+z-index:999;
+}
+
+#popup img{
+max-width:90%;
+max-height:90%;
+border-radius:10px;
+box-shadow:0 0 30px #c77dff;
+}
+
+/* back button */
+
+.back{
+display:inline-block;
+margin-top:40px;
+padding:12px 25px;
+background:#7b2cbf;
+border-radius:10px;
+text-decoration:none;
+color:white;
+}
+
+</style></head><body><div id="particles-js"></div><div class="container"><h1>My Projects</h1><div class="projects"><div class="card"><img src="https://img5.pic.in.th/file/secure-sv1/97253941a874955f10c180764759d2cd019720f5560c4f2a.gif"><h3>Roblox Script</h3><p>สคริปต์เปิดเพลง+ตัวดูดไอดีเพลง+สคริปต์อื่นอีกมากมาย</p><a class="btn" onclick="showImage(this)" data-img="https://img5.pic.in.th/file/secure-sv1/97253941a874955f10c180764759d2cd019720f5560c4f2a.gif">
+<span></span><span></span><span></span><span></span>
+View
+</a></div><div class="card"><img src="https://img5.pic.in.th/file/secure-sv1/orca-image--834132203.jpeg"><h3>Discord Bot</h3><p>Bot Script Logger & Bot Security</p><a class="btn" onclick="showImage(this)" data-img="https://img5.pic.in.th/file/secure-sv1/orca-image--834132203.jpeg">
+<span></span><span></span><span></span><span></span>
+View
+</a></div><div class="card"><img src="https://img5.pic.in.th/file/secure-sv1/orca-image--662903339.jpeg"><h3>1220</h3><p>สคริปต์ทั้งหมดรวมอยู่ในดิสคอร์ดหมดแล้วเข้ามากันเยอะๆน้าาา สามารถเข้ามาพูดคุยกันได้ทุกคนเป็นกันเองสุดๆ</p><a class="btn" href="https://discord.gg/aZRzkY7fzN" target="_blank">
+<span></span><span></span><span></span><span></span>
+Join Discord
+</a>
+</a></div></div><a href="index.html" class="back">← Back</a>
+
+</div><!-- popup --><div id="popup" onclick="closePopup()">
+<img id="popup-img">
+</div><script src="https://cdn.jsdelivr.net/npm/particles.js"></script><script>
+
+/* particles */
+
+particlesJS("particles-js",{
+
+particles:{
+number:{value:80},
+
+color:{value:"#c77dff"},
+
+shape:{type:"circle"},
+
+opacity:{value:0.5},
+
+size:{value:3},
+
+line_linked:{
+enable:true,
+distance:150,
+color:"#9d4edd",
+opacity:0.4
+},
+
+move:{
+enable:true,
+speed:2
+}
+
+},
+
+interactivity:{
+events:{
+onhover:{
+enable:true,
+mode:"repulse"
+},
+onclick:{
+enable:true,
+mode:"push"
+}
+},
+
+modes:{
+repulse:{
+distance:120
+},
+push:{
+particles_nb:4
+}
+}
+
+},
+
+retina_detect:true
+
+})
+
+/* popup */
+
+function showImage(btn){
+
+let img=btn.getAttribute("data-img")
+
+document.getElementById("popup-img").src=img
+
+document.getElementById("popup").style.display="flex"
+
+}
+
+function closePopup(){
+
+document.getElementById("popup").style.display="none"
+
+}
+
+</script></body>
+</html>
